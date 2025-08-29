@@ -1,4 +1,5 @@
 #include <Arduino.h>
+<<<<<<< HEAD
 #include <esp_now.h>
 #include <WiFi.h>
 #include <lvgl.h>
@@ -193,3 +194,22 @@ if (newInstruction) {
   // small yield — keep WiFi/other RTOS tasks happy
   delay(5);
 }
+=======
+#include <TFT_eSPI.h> 
+TFT_eSPI tft = TFT_eSPI();
+
+void setup() 
+{
+  tft.init();
+  tft.setRotation(1);
+  tft.fillScreen(TFT_BLACK);
+  tft.setCursor(0,0,4);
+  tft.setTextColor(TFT_WHITE);
+  tft.println ("Hello World!");
+}
+
+void loop() 
+{
+  // put your main code here, to run repeatedly:
+}
+>>>>>>> 81acf0c4f296b0413463cb9f9df3bc29779846c0
